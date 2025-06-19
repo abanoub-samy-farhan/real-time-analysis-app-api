@@ -2,11 +2,11 @@
   "name": "real-time-analysis",
   "version": "1.0.0",
   "description": "Providing a real time analysis to products through analizing reviews",
-  "main": "api/index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon api/index.js",
+    "dev": "nodemon index",
     "build": "echo 'No build step required'",
-    "start": "node api/index.js"
+    "start": "node index"
   },
   "author": "",
   "license": "ISC",
