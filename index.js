@@ -9,7 +9,9 @@ const port = process.env.PORT || 3000;
 const { generateSummary } = require('./controllers/postData');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
