@@ -12,6 +12,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Text Summarization API');
+})
+
 app.post('/generate', generateSummary);
 
 module.exports = app;
