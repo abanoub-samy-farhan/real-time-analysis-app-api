@@ -14,6 +14,4 @@ app.use(express.json());
 
 app.post('/generate', generateSummary);
 
-app.listen(port, () => {
-    `Server is running on port ${port}`;
-})
+module.exports = app;
