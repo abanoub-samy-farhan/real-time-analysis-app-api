@@ -6,7 +6,7 @@ dotenv.config();
 
 const port = process.env.PORT || 3000;
 
-const { generateSummary } = require('../controllers/postData');
+const { generateSummary } = require('./controllers/postData');
 
 const app = express();
 app.use(cors());
