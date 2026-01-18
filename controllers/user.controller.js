@@ -59,7 +59,7 @@ router.post("/login", async (request, response) => {
             return response.status(401).send({ message: "Invalid email or password" });
         }
         const token = jwt.sign(
-            { userId: user._id, email: user.email },
+            { userId: user._id, email: user.email, user_firstname: user.firstname },
             process.env.JWT_SECRET,
             { expiresIn: "1h" }
         );

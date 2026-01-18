@@ -10,6 +10,7 @@ export default async function reviewProducer(job) {
             link,
             product_id,
             user_email,
+            user_firstname,
         } = job;
         const channel = await createChannel();
         let cleanedReviews;
@@ -26,6 +27,7 @@ export default async function reviewProducer(job) {
             link,
             product_id,
             user_email,
+            user_firstname,
         };
         await channel.sendToQueue(REVIEW_QUEUE,
             Buffer.from(JSON.stringify(reviewPayload))

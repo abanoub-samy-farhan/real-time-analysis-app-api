@@ -52,6 +52,7 @@ router.post("/generate", async (request, response) => {
             link: link,
             product_id: product_id,
             user_email: request.user.email,
+            user_firstname: request.user.user_firstname,
         });
         
         response.status(200).send({

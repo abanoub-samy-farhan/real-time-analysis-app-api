@@ -39,6 +39,7 @@ export async function reviewConsumer() {
                     link,
                     product_id,
                     user_email,
+                    user_firstname,
                 } = reviewPayload;
 
                 // check if the review already processed first or not
@@ -91,7 +92,7 @@ export async function reviewConsumer() {
                         to: user_email,
                         subject: 'Your review summary is ready',
                         templateData: {
-                            user: user.firstname,
+                            user: user_firstname,
                             product_title: title,
                             product_link: link,
                         }
