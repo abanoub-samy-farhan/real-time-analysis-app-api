@@ -86,12 +86,6 @@ export async function reviewConsumer() {
 
                 // Send email to user notifying them of summary completion
                 console.log(" [x] Sending email notification");
-                const user = await User.findOne({ email: user_email });
-                if (!user) {
-                    console.error(`User with email ${user_email} not found`);
-                    channel.ack(msg);
-                    return;
-                }
                 try{
                     await emailProducer({
                         to: user_email,
